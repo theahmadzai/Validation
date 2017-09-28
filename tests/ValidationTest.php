@@ -1,20 +1,13 @@
 <?php
 
-use Immortal\Validation\Validation;
+use Immortal\Validation\Validator;
 use PHPUnit\Framework\TestCase;
 
 final class ValidationTest extends TestCase
 {
     public function test_Constructor()
     {
-        $validation = new Validation();
-        $this->assertInstanceOf(Validation::class, $validation);
-    }
-
-    public function test_Validate()
-    {
-        $validation = new Validation();
-        $test       = $validation->validate('sdf');
-        $this->assertFalse($test);
+        $validation = new Validator();
+        $this->assertInstanceOf(Validator::class, $validation);
     }
 }
